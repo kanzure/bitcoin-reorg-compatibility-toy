@@ -1,4 +1,5 @@
-FROM ubuntu:14.04
+# https://github.com/phusion/baseimage-docker
+FROM phusion/baseimage:0.9.15
 
 # blame this guy
 MAINTAINER Bryan Bishop <kanzure@gmail.com>
