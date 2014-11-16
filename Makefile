@@ -1,4 +1,4 @@
-.PHONY: touch build install-dev-deps
+.PHONY: touch build install-dev-deps clean
 
 # The "touch" target is useful for not losing docker's build cache when
 # switching between git branches.
@@ -12,3 +12,6 @@ build: touch
 
 install-dev-deps:
 	sudo apt-get install -y $(cat ./requirements-dev.apt)
+
+clean:
+	rm -fr reorgcompatservice.egg-info/
