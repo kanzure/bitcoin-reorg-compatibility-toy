@@ -3,3 +3,6 @@
 # they are necessary when building the container.
 
 bitcoind=0.9.3-trusty2
+
+python3
+python3-setuptools

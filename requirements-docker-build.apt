@@ -10,3 +10,7 @@ git
 # Some of the python requirements are going to need basic build tools
 # installed.
 build-essential
+
+# definitely need python during building
+python3
+python3-setuptools
