@@ -25,7 +25,7 @@ The toy in this repo is used in a docker container that runs bitcoind as well as
 
 ## Private keys
 
-Don't store private keys like in this repo. Don't sign from a hot wallet.
+Never store private keys in production.
 
 # License
 
