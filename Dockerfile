@@ -22,8 +22,8 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8842ce5e
 RUN apt-get update -y
 
 # store system-level package requirements in /tmp
-ADD ./requirements.apt /tmp/requirements.apt
+ADD ./requirements-docker.apt /tmp/requirements-docker.apt
 
 # Install whatever packages are required to run this thing. Filter out lines
 # beginning with "#" because they are comments.
-RUN apt-get install -y $(cat /tmp/requirements.apt | grep -v "^#")
+RUN apt-get install -y $(cat /tmp/requirements-docker.apt | grep -v "^#")
