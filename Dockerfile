@@ -37,3 +37,7 @@ RUN apt-get install -y $(cat /tmp/requirements-docker-build.apt | grep -v "^#")
 
 # install pip3
 RUN wget -q -O - https://bootstrap.pypa.io/get-pip.py | python3
+
+# install python-related requirements
+ADD ./requirements.pip /tmp/requirements.pip
+RUN pip3 install -r /tmp/requirements.pip
