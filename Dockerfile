@@ -34,3 +34,6 @@ ADD ./requirements-docker-build.apt /tmp/requirements-docker-build.apt
 
 # install requirements for the remainder of this "docker build"
 RUN apt-get install -y $(cat /tmp/requirements-docker-build.apt | grep -v "^#")
+
+# install pip3
+RUN wget -q -O - https://bootstrap.pypa.io/get-pip.py | python3
