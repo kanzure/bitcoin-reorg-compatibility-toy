@@ -1,0 +1,4 @@
+recursive-include reorgcompatservice *
+global-exclude *.pyc
+global-exclude .*.sw*
+global-exclude .git
