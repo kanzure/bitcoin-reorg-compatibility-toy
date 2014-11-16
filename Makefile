@@ -1,3 +1,5 @@
+.PHONY: touch build install-dev-deps
+
 # The "touch" target is useful for not losing docker's build cache when
 # switching between git branches.
 touch:
