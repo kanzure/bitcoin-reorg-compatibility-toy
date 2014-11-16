@@ -1,0 +1,12 @@
+# These are dependencies that need to be installed into the docker container
+# because they are used during the docker build process.
+
+# for fetching dependencies over http and https :(
+wget
+
+# some of the python requirements are going to need git
+git
+
+# Some of the python requirements are going to need basic build tools
+# installed.
+build-essential

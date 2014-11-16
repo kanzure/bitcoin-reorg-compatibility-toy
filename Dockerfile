@@ -27,3 +27,9 @@ ADD ./requirements-docker.apt /tmp/requirements-docker.apt
 # Install whatever packages are required to run this thing. Filter out lines
 # beginning with "#" because they are comments.
 RUN apt-get install -y $(cat /tmp/requirements-docker.apt | grep -v "^#")
+
+# store build-related package requirements in /tmp
+ADD ./requirements-docker-build.apt /tmp/requirements-docker-build.apt
+
+# install requirements for the remainder of this "docker build"
+RUN apt-get install -y $(cat /tmp/requirements-docker-build.apt | grep -v "^#")
