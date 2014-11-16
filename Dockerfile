@@ -51,6 +51,7 @@ ADD ./MANIFEST.in /app/MANIFEST.in
 
 # place source code at /app/reorgcompatservice
 ADD ./reorgcompatservice /app/
+ADD ./tests /app/
 
 # create symlinks for python to find reorgcompatservice source code
 RUN cd /app/reorgcompatservice/ && python3 setup.py develop
