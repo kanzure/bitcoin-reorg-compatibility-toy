@@ -7,3 +7,6 @@ touch:
 # Build the docker container based on ./Dockerfile here.
 build: touch
 	sudo docker build -t reorgcompat .
+
+install-dev-deps:
+	sudo apt-get install -y $(cat ./requirements-dev.apt)

@@ -3,7 +3,15 @@
 
 # Usage
 
-## Building the container
+## Installing development dependencies
+
+See [requirements-dev.apt](requirements-dev.apt) for a list of packages required to develop and work with the software in this repository. Basically just run something like:
+
+```
+sudo apt-get install -y $(cat ./requirements-dev.apt)
+```
+
+## Building the docker container
 
 ```
 make build
