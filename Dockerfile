@@ -41,3 +41,16 @@ RUN wget -q -O - https://bootstrap.pypa.io/get-pip.py | python3
 # install python-related requirements
 ADD ./requirements.pip /tmp/requirements.pip
 RUN pip3 install -r /tmp/requirements.pip
+
+# reorgcompatservice will be stored in /app
+RUN mkdir /app
+WORKDIR /app
+
+ADD ./setup.py /app/setup.py
+ADD ./MANIFEST.in /app/MANIFEST.in
+
+# place source code at /app/reorgcompatservice
+ADD ./reorgcompatservice /app/
+
+# create symlinks for python to find reorgcompatservice source code
+RUN cd /app/reorgcompatservice/ && python3 setup.py develop
