@@ -1,1 +1,5 @@
+# These are python dependencies fetched from pypi for the python source code in
+# this project.
+
+# use petertodd's fork of python-bitcoinlib
 python-bitcoinlib==0.2.1
