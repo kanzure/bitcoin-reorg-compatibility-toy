@@ -1,0 +1,25 @@
+reorgcompatservice:
+    # use Dockerfile in current working directory
+    build: ./
+
+    # use phusion/baseimage initialization system.
+    command: /sbin/my_init
+
+    # Publish these ports on to the host's machine and route traffic into the
+    # container's port.
+    ports:
+        # bitcoind listen port (regtest)
+        - "18444:18444"
+
+        # bitcoind json rpc port (testnet and regtest)
+        - "18332:18332"
+
+    # TODO: insert these values into bitcoind config during container boot.
+    environment:
+        BITCOIN_RPC_USERNAME: bitcoinrpc
+        BITCOIN_RPC_PASSWORD: password
+
+    volumes:
+        # Mount everything into the container so that developers don't have to
+        # rebuild the container to get file changes into a running container.
+        - ./:/app
