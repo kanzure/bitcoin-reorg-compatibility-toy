@@ -1,3 +1,6 @@
+# These are dependencies that should be installed on the host that is building
+# the docker container and making use of this repository.
+
 git
 make
 lxc-docker

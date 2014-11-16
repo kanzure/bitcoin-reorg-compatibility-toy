@@ -1,1 +1,5 @@
+# These are requirements that must be installed into the docker container, but
+# only because they are necessary when running the container, and not because
+# they are necessary when building the container.
+
 bitcoind=0.9.3-trusty2
