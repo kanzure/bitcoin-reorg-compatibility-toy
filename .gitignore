@@ -1,0 +1,9 @@
+# python outputs
+reorgcompatservice.egg-info/
+dist/
+
+# editor swap files
+.*.sw*
+
+# precompiled python
+*.pyc
