@@ -1,5 +1,17 @@
 FROM ubuntu:14.04
 
+# blame this guy
+MAINTAINER Bryan Bishop <kanzure@gmail.com>
+
+# environment variables
+ENV DEBIAN_FRONTEND noninteractive
+ENV HOME /root
+ENV LANG C.UTF-8
+ENV LC_ALL C
+
+# disable dpkg fsync to make zoom fast
+ADD ./container/etc/dpkg/dpkg.cfg.d/02apt-speedup /etc/dpkg/dpkg.cfg.d/02apt-speedup
+
 # because bitcoin package metadata
 ADD ./container/etc/apt/sources.list.d/bitcoin.list /etc/apt/sources.list.d/bitcoin.list
 
